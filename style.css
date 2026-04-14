@@ -1,0 +1,261 @@
+/* === Estilo General === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #000000, #1a1a1a);
+  color: #f9f9f9;
+}
+
+/* === Navbar === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #bfa100;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-img {
+  width: 40;
+  height: 40px;
+  object-fit: contain;
+  background-color: #bfa100;
+  padding: 5px;
+}
+
+.logo {
+  color: #bfa100;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f9f9f9;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #bfa100;
+}
+
+/* === Secciones === */
+.section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.section h2 {
+  color: #bfa100;
+  margin-bottom: 1rem;
+}
+
+/* === Cards === */
+.rutinas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #111;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(255,215,0,0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: rgba(191, 161, 0, 0.15);
+}
+
+.card h3 {
+  color: #bfa100;
+  margin-bottom: 1rem;
+}
+
+.card .descr {
+  color: #d1d1d1;
+  font-size: 0.9rem;
+}
+
+/* === Footer === */
+footer {
+  background-color: #000;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: #bfbfbf;
+  border-top: 2px solid #bfa100;
+}
+
+/* === Para los videos ===*/
+.videos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.video-card {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+}
+
+.video-card h3 {
+  color: #bfa100;
+  margin-bottom: 0.5rem;
+}
+
+.video-card p {
+  color: #d1d1d1;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.video-link {
+  display: inline-block;
+  background-color: #bfa100;
+  color: #000;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.video-link:hover {
+  background-color: #e0c000;
+}
+
+/* Rutina detalle */
+.rutina-detalle {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+  text-align: left;
+}
+
+.rutina-detalle h2 {
+  color: #bfa100;
+  text-align: center;
+}
+
+.rutina-detalle ul {
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+.rutina-detalle p {
+  margin-top: 1rem;
+  color: #d1d1d1;
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+}
+
+/* === ESTILOS DE RUTINAS === */
+
+.exercise {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.exercise:hover {
+  transform: scale(1.02);
+  background-color: rgba(191, 161, 0, 0.1);
+}
+
+.exercise h3 {
+  color: #bfa100;
+  margin-bottom: 0.5rem;
+}
+
+.time {
+  font-size: 1rem;
+  color: #d1d1d1;
+  margin-bottom: 1rem;
+}
+
+iframe {
+  border-radius: 8px;
+}
+
+.intro-text {
+  text-align: center;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.rutina-detalle {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  color: #e0e0e0;
+}
+
+.rutina-detalle h2 {
+  color: #bfa100;
+  margin-bottom: 1rem;
+}
+
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .logo-img {
+    width: 35px;
+    height: 35px;
+  }
+}
