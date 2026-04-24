@@ -1,90 +1,158 @@
-/* === ESTILO GENERAL === */
+*{
+    box-sizing: border-box;
+}
+
+/* GENERAL */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #000000, #1a1a1a);
-  color: #f9f9f9;
+  background: #000;
+  color: #fff;
+  padding-top: 80px;
 }
 
-/* === NAVBAR === */
+img{
+    max-width: 100%;
+}
+
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
-  padding: 1rem 2rem;
-  border-bottom: 2px solid #bfa100;
   flex-wrap: wrap;
+  padding: 15px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index: 10;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 10px;
 }
 
 .logo-img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  background-color: #bfa100;
-  padding: 5px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.logo-img {
+    filter: drop-shadow(0 0 6px rgba(241, 196, 15, 0.6));
 }
 
-.logo {
-  color: #bfa100;
-  font-size: 1.5rem;
-  margin: 0;
+.logo-text {
+    color: #f1c40f;
+    font-weight: 700;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #f9f9f9;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  color: #ccc;
+  transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: #bfa100;
+  color: #f1c40f;
 }
 
-/* === SECCIONES === */
+/* BOTÓN NAV */
+.btn-nav {
+  border: 1px solid #f1c40f;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: #f1c40f;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-nav:hover {
+  background: #f1c40f;
+  color: #000;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url("./img/hero.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 60px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.subtitle {
+  color: #f1c40f;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 900;
+}
+
+.hero span {
+  color: #f1c40f;
+}
+
+.hero-text {
+  color: #ccc;
+}
+
+/* SECCIÓN */
 .section {
+  padding: clamp(40px, 8vw, 80px) 20px;
   text-align: center;
-  padding: 2rem;
 }
 
-.section h2 {
-  color: #bfa100;
-  margin-bottom: 1rem;
-}
-
-.intro-text {
-  text-align: center;
-  color: #e0e0e0;
-  margin-bottom: 2rem;
-}
-
-/* === CARDS === */
-.rutinas-container {
+/* CARDS */
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
+  gap: 20px;
 }
 
 .card {
-  background-color: #111;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(255,215,0,0.1);
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  background: rgba(20,20,20,0.8);
+  border: 1px solid rgba(241,196,15,0.2);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: #f1c40f;
+  box-shadow: 0 0 30px rgba(241,196,15,0.3);
+}
+
+.card i {
+  font-size: 2rem;
+  color: #f1c40f;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #aaa;
 }
 
 .card-link {
@@ -92,99 +160,88 @@ body {
   color: inherit;
 }
 
-.card:hover {
-  transform: scale(1.05);
-  background-color: rgba(191, 161, 0, 0.15);
+.card:active {
+  transform: scale(0.98);
 }
 
-.card h3 {
-  color: #bfa100;
-  margin-bottom: 1rem;
+.card-consejos {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+
+  background: rgba(20,20,20,0.9);
+  border: 1px solid rgba(241,196,15,0.3);
+  border-radius: 20px;
+
+  box-shadow: 0 0 20px rgba(241,196,15,0.1);
 }
 
-.card .descr {
-  color: #d1d1d1;
-  font-size: 0.9rem;
-}
-
-/* === RUTINAS === */
-.exercise {
-  background-color: #111;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+.card-consejos h2 {
   text-align: center;
-  transition: transform 0.2s ease;
+  color: #f1c40f;
+  margin-bottom: 20px;
 }
 
-.exercise:hover {
-  transform: scale(1.02);
-  background-color: rgba(191, 161, 0, 0.1);
+.card-consejos ul {
+  list-style: none;
+  padding: 0;
 }
 
-.exercise h3 {
-  color: #bfa100;
-  margin-bottom: 0.5rem;
+.card-consejos li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  color: #ccc;
+  line-height: 1.5;
 }
 
-.time {
-  font-size: 1rem;
-  color: #d1d1d1;
-  margin-bottom: 1rem;
+.card-consejos li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #f1c40f;
+  font-weight: bold;
 }
 
-/* === DETALLE DE RUTINA === */
-.rutina-detalle {
-  background-color: #1a1a1a;
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin: 2rem;
-  color: #e0e0e0;
+/* BOTÓN CARD */
+.btn-card {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  border: 1px solid #f1c40f;
+  border-radius: 20px;
+  color: #f1c40f;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.rutina-detalle h2 {
-  color: #bfa100;
-  text-align: center;
-  margin-bottom: 1rem;
+.btn-card:hover {
+  background: #f1c40f;
+  color: #000;
 }
 
-.rutina-detalle ul {
-  line-height: 1.8;
-  margin-top: 1rem;
-}
-
-.rutina-detalle p {
-  margin-top: 1rem;
-  color: #d1d1d1;
-}
-
-/* === FOOTER === */
+/* FOOTER */
 footer {
-  background-color: #000;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  color: #bfbfbf;
-  border-top: 2px solid #bfa100;
+  padding: 20px;
+  border-top: 1px solid #333;
+  color: #888;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 600px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
+/*MOBILE*/
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .btn-nav {
+        width: 100%;
+        text-align: center;
+    }
 
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-    margin-top: 0.5rem;
-  }
-
-  .logo-img {
-    width: 35px;
-    height: 35px;
-  }
+    .logo-img {
+        width: 32px;
+        height: 32px;
+    }
+    
 }
