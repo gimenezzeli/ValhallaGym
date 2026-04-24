@@ -203,23 +203,6 @@ img{
   font-weight: bold;
 }
 
-.card-descargas {
-  background: #111;
-  border: 1px solid rgba(191,161,0,0.3);
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-}
-
-.card-descargas h3 {
-  color: #bfa100;
-  margin-bottom: 10px;
-}
-
-.card-descargas p {
-  color: #ccc;
-  margin-bottom: 15px;
-}
 
 /* CONTENEDOR BOTONES */
 .descargas {
