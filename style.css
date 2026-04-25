@@ -207,9 +207,9 @@ img{
 /* CONTENEDOR BOTONES */
 .descargas {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
 /* BOTONES */
