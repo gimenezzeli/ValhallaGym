@@ -66,6 +66,10 @@ img{
   color: #f1c40f;
 }
 
+.nav-links a.active {
+  color: #bfa100;
+}
+
 /* BOTÓN NAV */
 .btn-nav {
   border: 1px solid #f1c40f;
