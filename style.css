@@ -66,6 +66,10 @@ img{
   color: #f1c40f;
 }
 
+.nav-links a.active {
+  color: #bfa100;
+}
+
 /* BOTÓN NAV */
 .btn-nav {
   border: 1px solid #f1c40f;
@@ -201,6 +205,31 @@ img{
   left: 0;
   color: #f1c40f;
   font-weight: bold;
+}
+
+
+/* CONTENEDOR BOTONES */
+.descargas {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* BOTONES */
+.btn-descarga {
+  background: transparent;
+  border: 1px solid #bfa100;
+  color: #bfa100;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.btn-descarga:hover {
+  background: #bfa100;
+  color: #000;
 }
 
 /* BOTÓN CARD */
