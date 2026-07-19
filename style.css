@@ -328,10 +328,17 @@ img{
 .footer-info a{
   color:#aaa;
   text-decoration:none;
-  transition:.3s;
 }
 
 .footer-info a:hover{
+  color:#f1c40f;
+}
+
+.footer-info a:visited{
+  color:#aaa;
+}
+
+.footer-info a:active{
   color:#f1c40f;
 }
 
