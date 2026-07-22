@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Valhalla Gym</title>
 
         <!--Fuente-->
@@ -17,13 +17,13 @@
     
     <body>
         <header class="navbar">
-            <div class="logo-container">
+            <a href="index.html" class="logo-container">
                 <img src="img/logo.png" alt="logo" class="logo-img">
                 <h2 class="logo-text">VALHALLA GYM</h2>
-            </div>
+            </a>
             
             <nav class="nav-links">
-                <a href="index.html">Inicio</a>
+                <a href="index.html" class="active">Inicio</a>
                 <a href="#contacto">Contacto</a>
             </nav>
         </header>
@@ -34,7 +34,7 @@
                 <p class="subtitle">VALHALLA GYM</p>
                 <h1>TRANSFORMÁ TU CUERPO,<br><span>SUPERÁ TUS LÍMITES</span></h1>
                 <p class="hero-text">
-                    Entrená con profesionales, mejorá tu rendimiento y alcanzá tus objetivos con rutinas adaptadas a todos los niveles.
+                    Accedé a las rutinas de gimnasio diseñadas y organizadas por un entrenador, adaptadas a tu objetivo y nivel de entrenamiento. 
                 </p>
                 <a href="#rutinas" class="btn">Ver rutinas</a>
             </div>
@@ -42,38 +42,41 @@
 
         <section class="benefits">
             <div class="section-header">
-                <h2>¿Por qué <span>Valhalla Gym</span>?</h2>
+                <h2>¿Cómo usar las <span>rutinas</span>?</h2>
                 <p>
-                    Un espacio pensado para que entrenes con comodidad,
-                    seguridad y constancia.
+                    Seguí estos simples pasos para encontrar el entrenamiento que mejor se adapte a tus objetivos.
                 </p>
             </div>
 
             <div class="benefits-grid">
                 <div class="benefit">
-                    <i class="fas fa-dumbbell"></i>
-                    <h3>Equipamiento</h3>
-                    <p>Máquinas y elementos para entrenamientos completos.</p>
+                    <i class="fas fa-bullseye"></i>
+                    <h3>1. Elegí tu objetivo</h3>
+                    <p>Seleccioná el tipo de entrenamiento que querés realizar: Fuerza, Hipertrofía, Calistenia o Circuitos de cardio.</p>
                 </div>
 
                 <div class="benefit">
-                    <i class="fas fa-user-check"></i>
-                    <h3>Profesionales</h3>
-                    <p>Entrenadores que te acompañan en tu progreso.</p>
+                    <i class="fas fa-layer-group"></i>
+                    <h3>2. Elegí tu nivel</h3>
+                    <p>Dentro de cada rutina vas a encontrar opciones para Principiante, Intermedio y Avanzado.</p>
                 </div>
 
                 <div class="benefit">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Todos los niveles</h3>
-                    <p>Rutinas adaptadas a cada objetivo.</p>
+                    <i class="fas fa-file-arrow-down"></i>
+                    <h3>3. Descargá la rutina</h3>
+                    <p>Descargá el archivo y, si necesitás realizar modificaciones, consultá con un entrenador.</p>
                 </div>
             </div>
         </section>
 
         <!-- SECCIÓN -->
         <section class="section" id="rutinas">
-            <div class="cards">
+            <h2 class="section-title">Elegí tu objetivo</h2>
+            <p class="section-text">
+                Seleccioná el tipo de entrenamiento que mejor se adapte a tus metas.
+            </p>
 
+            <div class="cards">
                 <div class="card">
                     <i class="fas fa-dumbbell"></i>
                     <h3>Fuerza</h3>
@@ -101,7 +104,14 @@
                     <p>Mejorá tu resistencia con entrenamientos dinámicos.</p>
                     <a href="./pages/circuitos.html" class="btn">VER RUTINAS</a>
                 </div>
+            </div>
 
+            <div class="notice">
+                <i class="fas fa-circle-info"></i>
+                <div>
+                    <h3>Importante</h3>
+                    <p>Las rutinas son una guía general. Si necesitás adaptar algún ejercicio o tenés dudas sobre la ejecución, consultá con un entrenador antes de comenzar.</p>
+                </div>
             </div>
         </section>
         
@@ -112,7 +122,7 @@
                     <h3>VALHALLA GYM</h3>
                     <p>
                         <i class="fas fa-location-dot"></i> 
-                        <a href="https://maps.app.goo.gl/yKCSepKTy3pjYq3eA?g_st=am" target="_blank" aria-label="noopener noreferrer">
+                        <a href="https://maps.app.goo.gl/yKCSepKTy3pjYq3eA?g_st=am" target="_blank" rel="noopener noreferrer">
                         Av. Los Quilmes 29, Bernal Oeste.</a>
                     </p>
                     <p><i class="fas fa-clock"></i>Horarios: Lunes a Viernes de 06hs a 23hs. Sabados y Domingos de 09hs a 18hs.</p>
@@ -122,11 +132,11 @@
                 <div class="footer-social">
                     <h4>Seguinos</h4>
 
-                    <a href="https://www.instagram.com/valhalla1gym?igsh=N3k1djRwYjdlMTg2" target="_blank" aria-label="Instagram">
+                    <a href="https://www.instagram.com/valhalla1gym?igsh=N3k1djRwYjdlMTg2" target="_blank" rel="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
 
-                    <a href="https://w.app/valhallagym" target="_blank" aria-label="WhatsApp">
+                    <a href="https://w.app/valhallagym" target="_blank" rel="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
