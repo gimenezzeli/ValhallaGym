@@ -219,7 +219,7 @@ img{
 }
 
 .notice i{
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #f1c40f;
   margin-left: 10px;
 }
@@ -233,6 +233,11 @@ img{
   margin: 0;
   color: #ccc;
   line-height: 2;
+}
+
+.active-page{
+  color:#f1c40f;
+  font-weight:600;
 }
 
 /* CARDS */
