@@ -1,3 +1,13 @@
+:root{
+    --primary:#f1c40f;
+    --text:#fff;
+    --text-light:#ccc;
+    --text-muted:#aaa;
+    --bg:#000;
+    --card:rgba(20,20,20,.85);
+    --transition:.3s ease;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -6,8 +16,8 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #000;
-  color: #fff;
+  background: var(--bg);
+  color: var(--text);
   padding-top: 80px;
 }
 
@@ -34,7 +44,7 @@ img{
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition);
   text-decoration: none;
 }
 
@@ -51,13 +61,11 @@ img{
   width: 40px;
   height: 40px;
   object-fit: contain;
-}
-.logo-img {
   filter: drop-shadow(0 0 6px rgba(241, 196, 15, 0.6));
 }
 
 .logo-text {
-  color: #f1c40f;
+  color: var(--primary);
   font-weight: 700;
 }
 
@@ -69,12 +77,12 @@ img{
 
 .nav-links a {
   text-decoration: none;
-  color: #ccc;
-  transition: 0.3s;
+  color: var(--text-light);
+  transition: color var(--transition);
 }
 
 .nav-links a:hover {
-  color: #f1c40f;
+  color: var(--primary);
 }
 
 .nav-links a.active {
@@ -83,17 +91,17 @@ img{
 
 /* BOTÓN NAV */
 .btn-nav {
-  border: 1px solid #f1c40f;
+  border: 1px solid var(--primary);
   padding: 8px 15px;
   border-radius: 20px;
-  color: #f1c40f;
+  color: var(--primary);
   text-decoration: none;
-  transition: 0.3s;
+  transition: var(--transition);
 }
 
 .btn-nav:hover {
-  background: #f1c40f;
-  color: #000;
+  background: var(--primary);
+  color: var(--bg);
 }
 
 /* HERO */
@@ -108,6 +116,19 @@ img{
   justify-content: center;
   text-align: center;
   padding: 120px 20px 60px;
+}
+.hero-home {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url("./img/hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-fuerza {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url("./img/barra_olimpica.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-content {
@@ -127,7 +148,7 @@ img{
 }
 
 .subtitle {
-  color: #f1c40f;
+  color: var(--primary);
   letter-spacing: 3px;
 }
 
@@ -137,11 +158,11 @@ img{
 }
 
 .hero span {
-  color: #f1c40f;
+  color: var(--primary);
 }
 
 .hero-text {
-  color: #ccc;
+  color: var(--text-light);
 }
 
 /* SECCIÓN */
@@ -161,11 +182,11 @@ img{
 }
 
 .section-header span{
-  color:#f1c40f;
+  color: var(--primary);
 }
 
 .section-header p{
-  color:#aaa;
+  color:var(--text-muted);
 }
 
 .benefits-grid{
@@ -182,7 +203,7 @@ img{
 
 .benefit i{
   font-size:3rem;
-  color:#f1c40f;
+  color: var(--primary);
   margin-bottom:20px;
 }
 
@@ -191,7 +212,7 @@ img{
 }
 
 .benefit p{
-  color:#aaa;
+  color:var(--text-muted);
   line-height:1.6;
 }
 
@@ -200,7 +221,7 @@ img{
   display:block;
   width:80px;
   height:4px;
-  background:#f1c40f;
+  background: var(--primary);
   margin:15px auto 0;
   border-radius:20px;
 }
@@ -208,35 +229,35 @@ img{
 .notice {
   width: 100%;
   margin: 70px auto 0;
-  padding: 25px 35x;
+  padding: 25px 35px;
   display: flex;
   align-items: center;
+  gap: 20px;
 
   background: rgba(241, 196, 15, 0.08);
   border: 1px solid rgba(241, 196, 15, 0.3);
-  border-left: 6px solid #f1c40f;
+  border-left: 6px solid var(--primary);
   border-radius: 15px;
 }
 
 .notice i{
   font-size: 1.5rem;
-  color: #f1c40f;
-  margin-left: 10px;
+  color: var(--primary);
 }
 
 .notice h3 {
   margin: 0 0 8px;
-  color: #f1c40f;
+  color: var(--primary);
 }
 
 .notice p {
   margin: 0;
-  color: #ccc;
+  color: var(--text-light);
   line-height: 2;
 }
 
 .active-page{
-  color:#f1c40f;
+  color: var(--primary);
   font-weight:600;
 }
 
@@ -248,11 +269,11 @@ img{
 }
 
 .card {
-  background: rgba(20,20,20,0.8);
+  background: var(--card);
   border: 1px solid rgba(241,196,15,0.2);
   border-radius: 20px;
   padding: 30px;
-  transition: 0.3s;
+  transition: var(--transition);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -260,18 +281,18 @@ img{
 
 .card:hover {
   transform: translateY(-10px) scale(1.02);
-  border-color: #f1c40f;
+  border-color: var(--primary);
   box-shadow: 0 0 30px rgba(241,196,15,0.3);
 }
 
 .card i {
   font-size: 2rem;
-  color: #f1c40f;
+  color: var(--primary);
   margin-bottom: 10px;
 }
 
 .card p {
-  color: #aaa;
+  color: var(--text-muted);
   flex-grow: 1;
 }
 
@@ -289,7 +310,7 @@ img{
   margin: 40px auto;
   padding: 25px;
 
-  background: rgba(20,20,20,0.9);
+  background: var(--card);
   border: 1px solid rgba(241,196,15,0.3);
   border-radius: 20px;
 
@@ -298,7 +319,7 @@ img{
 
 .card-consejos h2 {
   text-align: center;
-  color: #f1c40f;
+  color: var(--primary);
   margin-bottom: 20px;
 }
 
@@ -311,7 +332,7 @@ img{
   position: relative;
   padding-left: 25px;
   margin-bottom: 12px;
-  color: #ccc;
+  color: var(--text-light);
   line-height: 1.5;
 }
 
@@ -319,10 +340,9 @@ img{
   content: "✔";
   position: absolute;
   left: 0;
-  color: #f1c40f;
+  color: var(--primary);
   font-weight: bold;
 }
-
 
 /* CONTENEDOR BOTONES */
 .descargas {
@@ -336,18 +356,18 @@ img{
 .btn{
   display:inline-block;
   padding:12px 28px;
-  border:2px solid #f1c40f;
+  border:2px solid var(--primary);
   border-radius:50px;
-  color:#f1c40f;
+  color:var(--primary);
   background:transparent;
   text-decoration:none;
   font-weight:600;
-  transition:.3s;
+  transition:var(--transition);
 }
 
 .btn:hover{
-  background:#f1c40f;
-  color:#000;
+  background:var(--primary);
+  color:var(--bg);
   box-shadow:0 0 30px rgba(241,196,15,.3);
 }
 
@@ -370,7 +390,7 @@ img{
 }
 
 .footer-info h3{
-  color:#f1c40f;
+  color:var(--primary);
   margin-bottom:15px;
 }
 
@@ -379,7 +399,7 @@ img{
 }
 
 .footer-info i{
-  color:#f1c40f;
+  color:var(--primary);
   margin-right:8px;
 }
 
@@ -389,7 +409,7 @@ img{
 }
 
 .footer-info a:hover{
-  color:#f1c40f;
+  color:var(--primary);
 }
 
 .footer-info a:visited{
@@ -397,23 +417,23 @@ img{
 }
 
 .footer-info a:active{
-  color:#f1c40f;
+  color:var(--primary);
 }
 
 .footer-social h4{
   margin-bottom:15px;
-  color:#fff;
+  color:var(--text);
 }
 
 .footer-social a{
-  color:#f1c40f;
+  color:var(--primary);
   font-size:1.5rem;
   margin-right:15px;
-  transition:.3s;
+  transition:var(--transition);
 }
 
 .footer-social a:hover{
-  color:#fff;
+  color:var(--text);
 }
 
 .footer-bottom{
@@ -430,6 +450,7 @@ img{
     flex-direction: column;
     gap: 10px;
   }
+
   .btn-nav {
     width: 100%;
     text-align: center;
@@ -444,5 +465,4 @@ img{
     flex-direction:column;
     text-align:center;
   }
-    
 }
