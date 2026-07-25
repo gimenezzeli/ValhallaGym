@@ -9,7 +9,7 @@
 }
 
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* GENERAL */
@@ -89,21 +89,6 @@ img{
   color: #bfa100;
 }
 
-/* BOTÓN NAV */
-.btn-nav {
-  border: 1px solid var(--primary);
-  padding: 8px 15px;
-  border-radius: 20px;
-  color: var(--primary);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.btn-nav:hover {
-  background: var(--primary);
-  color: var(--bg);
-}
-
 /* HERO */
 .hero {
   height: 100vh;
@@ -127,6 +112,20 @@ img{
 .hero-fuerza {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
               url("./img/barra_olimpica.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-hipertrofia {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url("./img/mancuernas.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-calistenia {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url("./img/barra.png");
   background-size: cover;
   background-position: center;
 }
