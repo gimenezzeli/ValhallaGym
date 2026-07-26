@@ -444,6 +444,8 @@ img{
   .hero-fuerza {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
               url("./img/barra_olimpica_mobile.png");
+    background-size: cover;
+    background-position: center;
   }
 
   .hero-calistenia {
