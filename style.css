@@ -92,42 +92,33 @@ img{
 /* HERO */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-              url("./img/hero.png");
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 120px 20px 60px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero-home {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
               url("./img/hero.png");
-  background-size: cover;
-  background-position: center;
 }
 
 .hero-fuerza {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
               url("./img/barra_olimpica.png");
-  background-size: cover;
-  background-position: center;
 }
 
 .hero-hipertrofia {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
               url("./img/mancuernas.png");
-  background-size: cover;
-  background-position: center;
 }
 
 .hero-calistenia {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
               url("./img/barra.png");
-  background-size: cover;
-  background-position: center;
 }
 
 .hero-content {
@@ -448,6 +439,16 @@ img{
   .navbar {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .hero-fuerza {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url("./img/barra_olimpica_mobile.png");
+  }
+
+  .hero-calistenia {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url("./img/barra_calistenia_mobile.png");
   }
 
   .btn-nav {
