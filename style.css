@@ -433,6 +433,13 @@ img{
   text-align:center;
   color:#777;
 }
+.muscle-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+}
 
 /*MOBILE*/
 @media (max-width: 768px) {
