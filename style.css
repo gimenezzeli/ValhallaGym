@@ -434,8 +434,8 @@ img{
   color:#777;
 }
 .muscle-img {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   display: block;
   margin: 0 auto 15px;
@@ -449,8 +449,8 @@ img{
   }
 
   .muscle-img {
-    width: 75px;
-    height: 75px;
+    width: 90px;
+    height: 90px;
   }
 
   .hero-fuerza {
