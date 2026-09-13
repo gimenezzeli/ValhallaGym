@@ -434,11 +434,11 @@ img{
   color:#777;
 }
 .muscle-img {
-  width: 140px;
-  height: 140px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   display: block;
-  margin: 0 auto 20px;
+  margin: 0 auto 15px;
 }
 
 /*MOBILE*/
@@ -446,6 +446,11 @@ img{
   .navbar {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .muscle-img {
+    width: 75px;
+    height: 75px;
   }
 
   .hero-fuerza {
