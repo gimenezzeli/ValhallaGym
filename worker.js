@@ -99,165 +99,340 @@ function getCookie(request, name) {
 
   return null;
 }
-
 function loginPage(error = false) {
-  return `<!doctype html>
-
+  return `<!DOCTYPE html>
 <html lang="es">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+  <title>Acceso | Valhalla Gym</title>
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 
-<title>Acceso | Valhalla Gym</title>
+  <style>
+    :root {
+      --primary: #f1c40f;
+      --text: #fff;
+      --text-light: #ccc;
+      --text-muted: #aaa;
+      --bg: #000;
+      --card: rgba(20,20,20,.88);
+      --transition: .3s ease;
+    }
 
-<style>
+    * {
+      box-sizing: border-box;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    body {
+      margin: 0;
+      min-height: 100vh;
 
-body {
-  margin: 0;
-  min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
 
-  display: grid;
-  place-items: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  background: #111;
-  color: #fff;
+      padding: 25px;
 
-  font-family: Arial, sans-serif;
-}
+      background:
+        linear-gradient(
+          rgba(0,0,0,.78),
+          rgba(0,0,0,.95)
+        ),
+        url("https://gimenezzeli.github.io/ValhallaGym/img/hero.png");
 
-.login {
-  width: min(92%, 420px);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
 
-  padding: 32px;
+    .login-container {
+      width: 100%;
+      max-width: 430px;
+      text-align: center;
+      animation: fade .8s ease;
+    }
 
-  background: #1b1b1b;
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
 
-  border: 1px solid #333;
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
 
-  border-radius: 18px;
+    .logo {
+      width: 75px;
+      height: 75px;
+      object-fit: contain;
 
-  text-align: center;
+      margin-bottom: 10px;
 
-  box-shadow:
-    0 15px 50px rgba(0,0,0,.35);
-}
+      filter:
+        drop-shadow(
+          0 0 10px
+          rgba(241,196,15,.65)
+        );
+    }
 
-.brand {
-  font-weight: 900;
+    .brand {
+      margin: 0 0 35px;
 
-  letter-spacing: 3px;
+      color: var(--primary);
 
-  font-size: 22px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
 
-  margin-bottom: 28px;
-}
+    .login-card {
+      padding: 35px 30px;
 
-h1 {
-  margin: 0 0 8px;
+      background: var(--card);
 
-  font-size: 30px;
-}
+      border: 1px solid
+        rgba(241,196,15,.25);
 
-p {
-  color: #bbb;
-}
+      border-radius: 20px;
 
-input {
-  width: 100%;
+      box-shadow:
+        0 0 30px
+        rgba(241,196,15,.08);
+    }
 
-  padding: 14px 16px;
+    .login-card h1 {
+      margin: 0;
 
-  border-radius: 10px;
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      font-weight: 900;
 
-  border: 1px solid #444;
+      letter-spacing: .5px;
+    }
 
-  background: #111;
+    .login-card h1 span {
+      color: var(--primary);
+    }
 
-  color: #fff;
+    .login-line {
+      width: 80px;
+      height: 4px;
 
-  font-size: 16px;
+      margin: 15px auto 25px;
 
-  margin: 12px 0;
-}
+      background: var(--primary);
 
-button {
-  width: 100%;
+      border-radius: 20px;
+    }
 
-  padding: 14px;
+    .description {
+      margin: 0 0 28px;
 
-  border: 0;
+      color: var(--text-muted);
 
-  border-radius: 10px;
+      font-size: .95rem;
+      line-height: 1.6;
+    }
 
-  background: #fff;
+    .input-group {
+      text-align: left;
+      margin-bottom: 20px;
+    }
 
-  color: #111;
+    .input-group label {
+      display: block;
 
-  font-weight: 800;
+      margin-bottom: 8px;
 
-  font-size: 15px;
+      color: var(--text-light);
 
-  cursor: pointer;
-}
+      font-size: .9rem;
+      font-weight: 500;
+    }
 
-.error {
-  color: #ff7676;
+    .password-input {
+      width: 100%;
 
-  font-size: 14px;
-}
+      padding: 13px 16px;
 
-</style>
+      border: 1px solid
+        rgba(241,196,15,.25);
 
+      border-radius: 12px;
+
+      outline: none;
+
+      background: rgba(0,0,0,.7);
+
+      color: var(--text);
+
+      font-family: inherit;
+      font-size: 1rem;
+
+      transition: var(--transition);
+    }
+
+    .password-input:focus {
+      border-color: var(--primary);
+
+      box-shadow:
+        0 0 15px
+        rgba(241,196,15,.18);
+    }
+
+    .password-input::placeholder {
+      color: #777;
+    }
+
+    .btn {
+      width: 100%;
+
+      padding: 12px 28px;
+
+      border: 2px solid var(--primary);
+      border-radius: 50px;
+
+      color: var(--primary);
+      background: transparent;
+
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+
+      cursor: pointer;
+
+      transition: var(--transition);
+    }
+
+    .btn:hover {
+      background: var(--primary);
+      color: var(--bg);
+
+      box-shadow:
+        0 0 30px
+        rgba(241,196,15,.3);
+    }
+
+    .error {
+      margin: 18px 0 0;
+
+      padding: 10px 12px;
+
+      border-radius: 10px;
+
+      background: rgba(220,50,50,.1);
+      border: 1px solid rgba(220,50,50,.3);
+
+      color: #ff8a8a;
+
+      font-size: .85rem;
+    }
+
+    .footer-text {
+      margin-top: 25px;
+
+      color: #777;
+
+      font-size: .75rem;
+    }
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 20px;
+      }
+
+      .logo {
+        width: 65px;
+        height: 65px;
+      }
+
+      .brand {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+      }
+
+      .login-card {
+        padding: 30px 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<main class="login">
+  <main class="login-container">
 
-<div class="brand">
-VALHALLA GYM
-</div>
+    <img
+      src="https://gimenezzeli.github.io/ValhallaGym/img/logo.png"
+      alt="Valhalla Gym"
+      class="logo"
+    >
 
-<h1>
-Acceso privado
-</h1>
+    <h2 class="brand">VALHALLA GYM</h2>
 
-<p>
-Ingresá la contraseña para continuar.
-</p>
+    <section class="login-card">
 
-<form method="POST" action="/login">
+      <h1>ACCESO <span>PRIVADO</span></h1>
 
-<input
-  type="password"
-  name="password"
-  placeholder="Contraseña"
-  autocomplete="current-password"
-  required
->
+      <div class="login-line"></div>
 
-<button type="submit">
-INGRESAR
-</button>
+      <p class="description">
+        Ingresá la contraseña para acceder
+        a las rutinas de entrenamiento.
+      </p>
 
-</form>
+      <form method="POST" action="/login">
 
-${error
-  ? '<p class="error">Contraseña incorrecta.</p>'
-  : ''}
+        <div class="input-group">
 
-</main>
+          <label for="password">
+            Contraseña
+          </label>
+
+          <input
+            id="password"
+            name="password"
+            type="password"
+            class="password-input"
+            placeholder="Ingresá tu contraseña"
+            autocomplete="current-password"
+            required
+            autofocus
+          >
+
+        </div>
+
+        <button type="submit" class="btn">
+          INGRESAR
+        </button>
+
+      </form>
+
+      ${
+        error
+          ? `<p class="error">
+               Contraseña incorrecta. Intentá nuevamente.
+             </p>`
+          : ""
+      }
+
+    </section>
+
+    <p class="footer-text">
+      Valhalla Gym · Entrenamiento y superación
+    </p>
+
+  </main>
 
 </body>
-
 </html>`;
 }
 
