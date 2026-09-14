@@ -266,10 +266,11 @@ export default {
   async fetch(request, env) {
 
     if (!env.PASSWORD) {
-  return new Response("NO_SECRET", { status: 500 });
-}
-
-return new Response("SECRET_OK", { status: 200 });
+  return new Response(
+    "Falta configurar el secret PASSWORD en Cloudflare.",
+    { status: 500 }
+  );
+    }
 
     const url = new URL(request.url);
 
