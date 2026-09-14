@@ -266,13 +266,11 @@ export default {
   async fetch(request, env) {
 
     if (!env.PASSWORD) {
-
-      return new Response(
-        "Falta configurar el secret PASSWORD en Cloudflare.",
-        {
-          status: 500
-        }
-      );
+  return new Response(
+    "El Worker funciona, pero Cloudflare no está entregando el secret PASSWORD al código.",
+    { status: 500 }
+  );
+    }
 
     }
 
