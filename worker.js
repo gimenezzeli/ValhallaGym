@@ -272,8 +272,6 @@ export default {
   );
     }
 
-    }
-
     const url = new URL(request.url);
 
     // Procesar inicio de sesión
