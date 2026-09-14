@@ -1,5 +1,5 @@
 const COOKIE_NAME = "vg_session";
-const SESSION_SECONDS = 60 * 60 * 24 * 7;
+const SESSION_SECONDS = 60 * 60 * 24 * 30;
 const encoder = new TextEncoder();
 
 function base64UrlEncode(bytes) {
