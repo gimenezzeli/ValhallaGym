@@ -104,6 +104,9 @@ img{
 .hero-home {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
               url("./img/hero.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hero-fuerza {
@@ -455,7 +458,15 @@ img{
 
   .hero-fuerza {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-              url("./img/barra_olimpica_mobile.png");
+              url("./img/barra_fuerza_mobile.png");
+    background-size: cover;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+  }
+  
+  .hero-hipertrofia {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url("./img/mancuernas_hipertrofia_mobile.png");
     background-size: cover;
     background-position: center 60%;
     background-repeat: no-repeat;
@@ -463,7 +474,18 @@ img{
 
   .hero-calistenia {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-              url("./img/barra_calistenia_mobile.png");
+              url("./img/paralelas_calistenia_mobile.png");
+    background-size: cover;
+    background-position: center 60%;
+    background-repeat: no-repeat;
+  }
+
+  .hero-circuitos {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+              url("./img/soga_circuitos_mobile.png");
+    background-size: cover;
+    background-position: center 60%;
+    background-repeat: no-repeat;
   }
 
   .btn-nav {
